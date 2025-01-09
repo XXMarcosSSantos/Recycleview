@@ -5,6 +5,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -20,59 +21,63 @@ class MainActivity : AppCompatActivity() {
         }
 
         val rvList = findViewById<RecyclerView>(R.id.rv_list)
+        val adapter = ContactListAdapter()
 
+        rvList.adapter = adapter
+        rvList.layoutManager = LinearLayoutManager(this)
+        adapter.submitList(contacts)
 
     }
 }
 
 val contacts = listOf(
     Contact(
-        "bruna",
+        "Bruna",
         "(55) 11 98765-4776",
         icon = R.drawable.sample16
     ),
     Contact(
-        "eduarda",
+        "Eduarda",
         "(55) 11 97654-9087",
         icon = R.drawable.sample15
     ),
     Contact(
-        "bruno",
+        "Bruno",
         "(55) 11 99077-4523",
         icon = R.drawable.sample14
     ),
     Contact(
-        "raabe",
+        "Mariana",
         "(55) 11 98066-9123",
         icon = R.drawable.sample13
     ),
     Contact(
-        "musq",
+        "Salah",
         "(55) 11 91267-7509",
         icon = R.drawable.sample12
     ),
     Contact(
-        "abigail",
+        "Abigail",
         "(55) 11 90186-9855",
         icon = R.drawable.sample11
     ),
     Contact(
-        "edu",
+        "Eduardo",
         "(55) 11 95542-7214",
         icon = R.drawable.sample10
     ),
     Contact(
-        "patrick",
+        "Patrick",
         "(55) 11 98765-4321",
         icon = R.drawable.sample9
     ),
     Contact(
-        "igor",
+        "Igor",
         "(55) 11 97654-3210",
         icon = R.drawable.sample8
     ),
     Contact(
-        "rose",
+        "Rose",
         "(55) 11 96543-2109",
         icon = R.drawable.sample7
     ),
@@ -82,27 +87,27 @@ val contacts = listOf(
         icon = R.drawable.sample6
     ),
     Contact(
-        "samara",
+        "Samara",
         "(55) 11 97321-0987",
         icon = R.drawable.sample5
     ),
     Contact(
-        "neide",
+        "Neide",
         "(55) 11 98765-4321",
         icon = R.drawable.sample4
     ),
     Contact(
-        "soraya",
+        "Soraya",
         "(55) 11 97654-3210",
         icon = R.drawable.sample3
     ),
     Contact(
-        "oscar",
+        "Oscar",
         "(55) 11 96543-2109",
         icon = R.drawable.sample2
     ),
     Contact(
-        "viviane",
+        "Viviane",
         "(55) 11 98432-1098",
         icon = R.drawable.sample1
     ),
