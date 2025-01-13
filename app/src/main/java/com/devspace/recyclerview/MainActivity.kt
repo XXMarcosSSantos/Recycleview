@@ -1,6 +1,7 @@
 package com.devspace.recyclerview
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -37,6 +38,9 @@ class MainActivity : AppCompatActivity() {
         ivList.setOnClickListener {
             rvList.layoutManager = LinearLayoutManager(this)
 
+        }
+        adapter.setOnClickListener { contact ->
+            Log.d("marcos", contact.toString())
         }
     }
 }
